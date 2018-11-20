@@ -1,4 +1,4 @@
-+++++++++++++++++++++  HEALTH MONITORING  ++++++++++++++++++++++++++++++
+# HEALTH MONITORING 
 
 We are monitoring the health related activities using data collected 
 from android app called AndroSensor.
@@ -17,3 +17,14 @@ We collected the data using mobile for different activities such as,
 We are extracting features and visualizing it using python libraries
 like pandas, matplotlib and numpy.
 
+### Contributors
+| Contributor       | Feature                   |
+| ------------------|:-------------------------:| 
+| Anggy             | Squats                    | 
+| Anggy             | Rest during actitvities   | 
+| Maria             | Calory calculation        | 
+| Maria             | Noise detection           | 
+| Rahul             | Number of stairs taken    | 
+| Rahul             | Blue light effect         | 
+| Andreas           | Number of jumps           | 
+| Andreas           | Phone distraction         | 
