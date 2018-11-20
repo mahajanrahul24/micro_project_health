@@ -78,10 +78,13 @@ while FLAG:
 
         if M == '1':
             TIME = T1
+            print("You choose Squats as your activity")
         elif M == '2':
             TIME = (dataframe.TIME[Y] - dataframe.TIME[X])*0.001 - T2
+            print("You choose Walking on Stairs as your activity")
         else:
             TIME = (dataframe.TIME[T_JUMPS_END] - dataframe.TIME[T_JUMPS_START])*0.001
+            print("You choose Jumps as your activity")
 
         CALORIES = calories.calories_calculation(MET, WEIGHT, TIME)
         print("You burned: %.2f Calories\n" %CALORIES)
