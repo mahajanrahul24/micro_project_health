@@ -1,4 +1,4 @@
-+++++++++++++++++++++HEALTH MONITORING++++++++++++++++++++++++++++++
++++++++++++++++++++++  HEALTH MONITORING  ++++++++++++++++++++++++++++++
 
 We are monitoring the health related activities using data collected 
 from android app called AndroSensor.
