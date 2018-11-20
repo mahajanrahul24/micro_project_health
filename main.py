@@ -15,49 +15,48 @@ import sound
 import total_calories
 import calories
 
+# Variables creation and function calls
 FLAG = True
-WEIGHT = float(input("Introduce your weight in Kg:"))
 
 sound.sound_file()
-
-print("\n\n-----------------------------------------------\n")
+NO_STAIRS = stairs.find_stairs()
 (X, Y, SQUATS, T1, T2, T3) = squats_resting.squats_and_resting(dataframe.ACC_Y,
                                                                dataframe.TIME)
-
-#squads_rest_project2.squats_and_resting()
-print("\nNumber of squats perfornmed:", len(SQUATS))
-print("Squats time in seconds: ", T1)
-print("Time resting in seconds after squats: ", T2)
-print("Time resting in seconds after stairs: ", T3)
-
-
-print("\n\n-----------------------------------------------\n")
-BLUE_LIGHT_TIME = blue_light_effect.blue_light()
-print("Light is low for %d seconds that means darkness around the mobile." %BLUE_LIGHT_TIME)
-print("Turned ON the blue light filter for this duration.")
-NO_STAIRS = stairs.find_stairs()
-print("Number of stairs taken: ", NO_STAIRS)
-
-
-print("\n\n-----------------------------------------------\n")
 PHONE_TIMES, OCCURANCES = count_phone_usage.phone_usage(dataframe.PROXIMITY)
 
 T_JUMPS_START = Y                           # Second rest period end
 T_JUMPS_END = OCCURANCES[2]                # Time jumps end
 
+BLUE_LIGHT_TIME = blue_light_effect.blue_light()
+
 PEAKS = peak_bounds.peak_bounds_funct(T_JUMPS_START, T_JUMPS_END,
                                       'ACC_RMS', 20.4)
 
-print("Total number of jumps: {}".format(len(PEAKS)))
-print("The user used the phone: {} times.".format(PHONE_TIMES))
+WEIGHT = float(input("Introduce your weight in Kg:"))
 
 CALORIES = total_calories.total_calories_calculation(WEIGHT, T1, T2, X,
                                                      Y, T_JUMPS_START, T_JUMPS_END)
+
+
+print("\n\n-----------------------------------------------\n")
+print("Number of squats perfornmed:", len(SQUATS))
+print("Squats time in seconds: ", T1)
+print("Number of stairs taken: ", NO_STAIRS)
+print("Total number of jumps: {}".format(len(PEAKS)))
+print("Time resting in seconds after squats: ", T2)
+print("Time resting in seconds after stairs: ", T3)
+
+print("\n-----------------------------------------------\n")
+print("Light is low for %d seconds that means darkness around the mobile." %BLUE_LIGHT_TIME)
+print("Turned ON the blue light filter for this duration.")
+print("The user used the phone: {} times.".format(PHONE_TIMES))
+print("\n-----------------------------------------------\n")
+
 print("You burned: %.2f Calories total during your exercise session\n" %(CALORIES))
 if CALORIES < 200:
     print("If you want to burn more Calories, you need to exercise for a ",
           "longer time\n")
-print("\n\n-----------------------------------------------\n")
+print("-----------------------------------------------\n\n")
 
 while FLAG:
     print("Do you want to know the calories burned during the different ",
