@@ -1,6 +1,7 @@
 # HEALTH MONITORING 
 [![Build Status](https://travis-ci.org/mahajanrahul24/micro_project_health.svg?branch=master)](https://travis-ci.org/mahajanrahul24/micro_project_health)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/bad451ecf4ad425ca9b5d8eb4cb57df1)](https://www.codacy.com/app/mahajanrahul24/micro_project_health?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mahajanrahul24/micro_project_health&amp;utm_campaign=Badge_Grade)
+[![codecov](https://codecov.io/gh/mahajanrahul24/micro_project_health/branch/master/graph/badge.svg)](https://codecov.io/gh/mahajanrahul24/micro_project_health)
 
 We are monitoring the health related activities using data collected 
 from android app called AndroSensor.
